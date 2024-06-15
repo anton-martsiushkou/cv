@@ -1,0 +1,250 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{calc} % added
+\usepackage{ragged2e}
+
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+    \item\small{
+        \begin{minipage}[t]{0.99\linewidth} % Adjust the width as needed
+        {#1}
+        \end{minipage}
+        \vspace{1pt} % Adjust the space between elements as needed
+    }
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheadingLeftOneRow}[2]{% % added
+    \begin{description}[leftmargin=!,labelwidth=\widthof{\small\bfseries #1}]
+        \item[\small #1]{\textit{\small  #2}}
+    \end{description}
+}
+
+\newcommand{\resumeSubSubheadingLeftTwoRows}[4]{%
+    \begin{description}[leftmargin=!,labelwidth=\widthof{\small\bfseries #1}]
+        \item[\small #1]{\textit{\small  #2}}
+        \item[\small #3]{\textit{\small  #4}}
+    \end{description}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+\textbf{\Huge \scshape Anton Martsiushkou} \\ \vspace{3pt}
+\textbf{ \Large Sowtware Developer in Test} \\ \vspace{1pt}
+\small +370-658-50-378 $|$ \href{mailto:martsiushkou@gmail.com}{\underline{martsiushkou@gmail.com}} $|$
+\href{https://www.linkedin.com/in/amartsiushkou/}{\underline{linkedin.com/in/amartsiushkou}} $|$
+\href{https://github.com/anton-martsiushkou}{\underline{github.com/anton-martsiushkou}}
+\end{center}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Senior Test Automation Engineer/Release Engineer}{Nov. 2021 -- Present}
+{MoonActive}{Vilnius, Lithuania}
+\resumeItemListStart
+\resumeItem{Designed and implemented tool for automated delivery of game content to different environments using Go, built this solution into the CI/CD (github actions) pipeline, reducing time of delivery from 1,5 hours to 20 minutes;}
+\resumeItem{Designed and implemented dashboard using Go that aggregates testing results for a set of microservices from many github workflows and displays them in a convenient form, reducing troubleshooting time and making test results more transparent for all teams;}
+\resumeItem{Managed the server end-to-end deployment process. Designed and implemented tools using Go and Python, that automate all processes that are connected with deployment activities: building of new version, collecting of release notes, integration with Jira, Confluence, Slack etc.;}
+\resumeItem{Improved work with mocks in microservices architecture, which made it possible to make tests more isolated and increase code coverage;}
+\resumeItem{Served as an expert in engineering decisions across content teams, contributing to the proposal, design and development of tools to automate routine manual tasks;}
+\resumeItem{Supporting of load tests created with k6.io and Loadmill;}
+\resumeItem{Conducted technical interviews for team candidates.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Lead Test Automation Engineer}{Mar. 2021 -- Nov. 2021}
+{Epam Systems}{Vilnius, Lithuania}
+\resumeItemListStart
+\resumeItem{Managed and mentored a team of test automation engineers, overseeing their professional development and execution of project assignments. As a resource manager, I allocated resources, defined task scopes, and optimized the team's capabilities to effectively achieve project goals;}
+\resumeItem{Designed, developed and introduced an test automation framework for already running project. Built CI/CD pipelines and introduced it into development process;}
+\resumeItem{Implemented python-behave client for Test Report Portal. It made it possible to use Report Portal as reporting platform for test automation engineers who used python-behave as test automation framework;}
+\resumeItem{Conducted technical interviews for team candidates.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Software Engineer}{Dec. 2019 -- Mar. 2021}
+{Lyft}{Minsk, Belarus}
+\resumeItemListStart
+\resumeItem{Implemented feedback tool for drivers using Go, which significantly improved experience of Lyft Navigation usage;}
+\resumeItem{Engineered and implemented data processing jobs using PySpark and DynamoDB, handling diverse map-related data, including traffic, road closures, and route information;}
+\resumeItem{Implemented automation testing for 10+ services using Go and Python+PyTest, built CI/CD pipelines for it using Jenkins.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Lead Test Automation Engineer}{Jul. 2018 -- Dec. 2019}
+{Juno}{Minsk, Belarus}
+\resumeItemListStart
+\resumeItem{Managed a proficient test automation team within the Data Warehouse domain;}
+\resumeItem{Engineered a comprehensive test automation framework for the Data Warehouse system (for data processing for taxi service) entirely from scratch using Python;}
+\resumeItem{ Established CI/CD processes for automating builds, tests, and deployments for fast and reliable software delivery using Jenkins.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Senior Test Automation Engineer}{Jul. 2016 -- Jul. 2018}
+{Juno}{Minsk, Belarus}
+\resumeItemListStart
+\resumeItem{Organized automation testing of the payment system for a taxi service using Python and PyTest, guaranteeing data accuracy and secure and flawless integration of payments with third-party payment services;}
+\resumeItem{Configured CI pipelines using Jenkins and Docker, automating builds and tests for 10+ microservices;}
+\resumeItem{ Supported automated tests, test frameworks and CI pipelines for 20+ microservices that are responsible for the integration of taxi service with 3rd-party systems. }
+\resumeItemListEnd
+
+\resumeSubheading
+{Senior Test Automation Engineer}{Oct. 2015 -- Jul. 2016}
+{LogicNow}{Minsk, Belarus}
+\resumeItemListStart
+\resumeItem{Designed and implemented test automation solution for SOAP and JSON-RPC  services with Python and PyTest;}
+\resumeItem{Created 20+ CI pipelines using TeamCity and Docker for running of automated tests on different environments, facilitating the transition from legacy tests running process to container-based strategies;}
+\resumeItem{ Increased success rate of UI tests written in Python + Selenium WebDriver by 18 percent. }
+\resumeItemListEnd
+
+\resumeSubheading
+{Test Automation Engineer}{Aug. 2012 -- Oct. 2015}
+{Epam Systems}{Minsk, Belarus}
+\resumeItemListStart
+\resumeItem{Developed a robust test automation framework for web application with C\# and Selenium WebDriver. Implemented integration of automated tests with TestRail and Jira;}
+\resumeItem{Configured CI using Jenkins to automate builds and tests;}
+\resumeItem{ Designed and developed test automation framework using C\# for SOAP web service for integrating different Thomson Reuters components with each other. Integrated this framework into the whole development process (configured CI system, implemented integration with reporting tools for automated tests) }
+\resumeItem{Conducted technical interviews for team candidates.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Belarusian State University of Informatics and Radioelectronics}{2013 -- 2016}
+{Master of Science in Technical Science}{Minsk, Belarus}
+\resumeSubSubheadingLeftOneRow
+{\textit{Specialization}:}{Information Management Systems}
+\resumeSubheading
+{Belarusian State University of Informatics and Radioelectronics}{2008 -- 2013}
+{Bachelor of Science in Computer Science}{Minsk, Belarus}
+\resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages}{: Go, Python, C\#, SQL} \\
+\textbf{Frameworks and test automation tools}{: PyTest, NUnit, behave, Selenium, k6.io, Loadmill, Perfecto Mobile} \\
+\textbf{Databases}{: MySQL, PostgreSQL, DynamoDB, Redis}\\
+\textbf{Architecture and Design}{: REST, gRPC, Microservices}\\
+\textbf{Message Brokers}{: Nats, Apache Kafka, SQS}\\
+\textbf{Developer Tools}{: Git, Prometheus, Grafana, Sentry, PyCharm, GoLand, VSCode} \\
+\textbf{CI/CD and Cloud}{: GitHub actions, Jenkins, ArgoCD, Docker, Helm, Kubernetes, AWS, Google Cloud Platform}\\
+}}
+\end{itemize}
+
+
+%-----------LANGUAGES-----------
+\section{Languages}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{English}{: B2 } \\
+\textbf{Lithuanian}{: A1 } \\
+\textbf{Russian}{: Native} \\
+\textbf{Belarussian}{: Native} \\
+}}
+\end{itemize}
+%-------------------------------------------
+\end{document}
